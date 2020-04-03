@@ -1,0 +1,7 @@
+GET - https://kix7tx694g.execute-api.us-east-1.amazonaws.com/dev/get_sentry_api
+
+GET - https://kix7tx694g.execute-api.us-east-1.amazonaws.com/dev/authenticate/{RFID}
+
+GET - https://kix7tx694g.execute-api.us-east-1.amazonaws.com/dev/updateGeolocation/{RFID}/{GEOLOCATION}
+
+GET - https://kix7tx694g.execute-api.us-east-1.amazonaws.com/dev/signIn/{RFID}/{USERNAME}/{PASSWORD} 
