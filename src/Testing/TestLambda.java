@@ -50,9 +50,17 @@ public class TestLambda {
     // The function checkAuthenticatefunc checks the lambda function authentication
     @Test
     public void checkAuthenticatefunc() throws IOException {
-        String GET_URL = "https://kix7tx694g.execute-api.us-east-1.amazonaws.com/dev/authenticate/2494100";
+        String GET_URL = "https://kix7tx694g.execute-api.us-east-1.amazonaws.com/dev/authenticate/2494100525";
         String result = sendGET(GET_URL);
         assertEquals("{\"status\":true}", result);
+    }
+
+    // The function checkLogin checks the lambda function signIn
+    @Test
+    public void checkLogin() throws IOException {
+        String GET_URL = "https://kix7tx694g.execute-api.us-east-1.amazonaws.com/dev/signIn/1001/Dilan/Dilan1";
+        String result = sendGET(GET_URL);
+        assertEquals("{\"status\":\"login successful\"}", result);
     }
 
 
