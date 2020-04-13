@@ -63,6 +63,17 @@ public class TestLambda {
         assertEquals("{\"status\":\"login successful\"}", result);
     }
 
+    @Test
+    public void checkLogin() throws IOException {
+        String GET_URL = "https://kix7tx694g.execute-api.us-east-1.amazonaws.com/dev/updateGeolocation/2494100525/30.288479,-97.735525";
+        String result = sendGET(GET_URL);
+        if(result == "{\"status\":true}"){
+            GET_URL = "https://kix7tx694g.execute-api.us-east-1.amazonaws.com/dev/authenticate/2494100525";
+            result = sendGET(GET_URL);
+        }
+        assertEquals("{\"status\":true}", result);
+    }
+
 
 }
 
